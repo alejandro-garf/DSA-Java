@@ -32,5 +32,14 @@ public class main{
 
         System.out.println(stack.search("Hola"));
 
+        // Run out of memory by creating too many objects in stack
+
+        for(int i = 0; i < 100000000; i++){
+            stack.push("Let you down");
+        }
+
     }
 }
+
+// Good for backtracking algoritmns
+ 
