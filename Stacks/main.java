@@ -23,6 +23,14 @@ public class main{
         // Peek method "peeks" at what object is at the top of the stack without changing anything
         System.out.println(stack.peek());
 
+        // Search Method
+        stack.push("Careless Whisper");
+        System.out.println(stack.search("APT"));
+        System.out.println(stack.search("Falling Down"));
+        System.out.println(stack.search("Disaster"));
+        System.out.println(stack.search("Careless Whisper"));
+
+        System.out.println(stack.search("Hola"));
 
     }
 }
