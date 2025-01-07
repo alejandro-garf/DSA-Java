@@ -1,5 +1,10 @@
+import java.util.Stack;
 public class main{
     public static void main(String[] args) {
-        System.out.print("Sup fam");
+     
+        Stack<String> stack = new Stack<String>();
+
+        System.out.print(stack.empty());
+
     }
 }
