@@ -18,6 +18,17 @@ public class Main{
 
         System.out.println(queue);
 
+        Queue<String> stringqueue = new PriorityQueue<>(Collections.reverseOrder()); // Strings are ordered in alphabetical order
+
+        stringqueue.offer("Alex");
+        stringqueue.offer("Bob");
+        stringqueue.offer("Dylan");
+
+        while(!stringqueue.isEmpty()){
+            System.out.println(stringqueue.poll());
+        }
+
+
         
 
     }
