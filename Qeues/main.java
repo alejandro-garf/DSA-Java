@@ -7,6 +7,8 @@ public class main{
 
         Queue<String> queue = new LinkedList<String>();
 
+        System.out.println(queue.isEmpty());
+
         queue.offer("First Place");
         queue.offer("Second Place");
         queue.offer("Third Place");
@@ -14,7 +16,11 @@ public class main{
         queue.offer("Fifth Place");
 
         System.out.println(queue);
+        System.out.println(queue.isEmpty());
         System.out.println(queue.peek());
+        System.out.println(queue.size());
+        System.out.println(queue.contains("First Place"));
+        System.out.println(queue.contains("Sah dude"));
 
         queue.poll();
 
