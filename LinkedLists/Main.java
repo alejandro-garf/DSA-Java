@@ -18,8 +18,28 @@ public class Main{
 
 
         // Treat it like a Qeue
-        
+        LinkedList<String> linkylist = new LinkedList<String>();
+        linkylist.offer("G");
+        linkylist.offer("A");
+        linkylist.offer("F");
 
+        System.out.println(linkylist);
+
+        linkylist.poll();
+        System.out.println(linkylist);
+
+        // LinkedList
+        LinkedList<String> linklist = new LinkedList<String>();
+        linklist.offer("G");
+        linklist.offer("A");
+        linklist.offer("F");
+
+        linklist.add(2, "R");
+        System.out.println(linklist);
+        linklist.remove("R");
+        System.out.println(linklist); 
+        linklist.remove(0);
+        System.out.println(linklist);
     }
 
 }
