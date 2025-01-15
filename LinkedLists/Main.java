@@ -40,6 +40,14 @@ public class Main{
         System.out.println(linklist); 
         linklist.remove(0);
         System.out.println(linklist);
+
+        System.out.println(linklist.indexOf("F"));
+
+        System.out.println(linkedlist.peekFirst());
+        System.out.println(linkedlist.peekLast());
+        linkedlist.addFirst("M");
+        linkedlist.addLast("B");
+        System.out.println(linkedlist);
     }
 
 }
