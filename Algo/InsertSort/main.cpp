@@ -1,32 +1,37 @@
 #include <iostream>
 
-//declare function at the top of the program
-// void insert_sort(int array[], int length);
+void insert_sort(int array[], int length);
 
-int main() {
+int main(){
 
-// create an arrat
-int array[] = { 4, 2, 0, 9, 8, 3 };
+    int array[] = {1, 4, 6, 9, 7, 5, 2};
+    int length = 7;
 
-//gives me the size of the array
-int length = sizeof(array)/sizeof(array[0]);
+    insert_sort(array, length);
 
-
-for (int i = 1; i < length; i ++) {
-        std::cout << i;
-}
-
-std::cout << "\n";
-
-for (int i = 0; i < length; i ++) {
-        std::cout << i;
-}
-
+    for (int i = 0; i < length; i++)
+    {
+        std::cout << "Index [" << i << "] = " << array[i] << "\n";
+    }
+    
     return 0;
 }
 
-/*void insert_sort(int array[], int length) 
-    //create an outer loop that starts at the second index (first one is already sorted) and traverses through the entire array
-    for (int i = 1; if i < length; i ++) {
-        std::cout << i;
-} */
+void insert_sort(int array[], int length)
+{
+    // iterates through each index of the array
+    for (int i = 1; i < length; i++)
+    {
+        int key = array[i]; // The vaue of the index we are looking at
+        int j = i - 1; // the index to the left of the index we are on
+        // while the index hasn't reached zero anf the value of the index to the left is bigger than the current value, keeo running through the loop. 
+        while (j >= 0 && array[j] > key)
+        {
+            //the value of the index to the left becomes the value of the index to the right
+            array[j + 1] = array[j]; 
+            j = j - 1; // The index keeps moving left with each loop 
+        }
+        // if the value of the index the left is less than the current value, the current index becomes the key 
+        array[ j + 1 ] = key;
+    }
+}
