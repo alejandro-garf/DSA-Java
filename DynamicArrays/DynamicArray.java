@@ -55,6 +55,15 @@ public class DynamicArray {
 
     // No idea lol, String?
     public String toString() {
+
+        String string = " "; // intialize empty string
+
+        // iterrates through the array
+        for(int i = 0; i < size; i++ ){
+            string += array[i] + ", ";    //not sure what it is doing here
+        }
+
+
         return null;
     }
 
