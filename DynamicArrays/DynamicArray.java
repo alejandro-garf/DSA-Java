@@ -16,7 +16,11 @@ public class DynamicArray {
 
     // Adds Object Data
     public void add(Object data){
-
+        if (size >= capacity){    // checks if we're at capacity and if we are it will grow the array
+            grow();
+        }
+        array[size] = data; // the array at index of the last item 
+        size++; // increase our size by one
     }
 
     // Inserts Object Data at specefic index 
