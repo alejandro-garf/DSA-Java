@@ -64,7 +64,7 @@ public class DynamicArray {
         }
 
 
-        return null;
+        return string;
     }
 
 
