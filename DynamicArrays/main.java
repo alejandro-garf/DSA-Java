@@ -8,12 +8,13 @@ public class main{
         DynamicArray dynamicArray = new DynamicArray();
        
 
-        dynamicArray.add("A");
-        dynamicArray.add("B");
-        dynamicArray.add("C");
-        dynamicArray.add("D");
+        //dynamicArray.add("A");
+        //dynamicArray.add("B");
+       // dynamicArray.add("C");
+        //dynamicArray.add("D");
 
         System.out.println(dynamicArray);
+        System.out.println("empty: " + dynamicArray.isEmpty());
 
 
         
