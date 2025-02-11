@@ -66,6 +66,9 @@ public class DynamicArray {
         if (string != ""){
             string = "[" + string.substring(0, string.length() - 2) + "]"; //gets ride of the comma at the end and encapuslates in square brackets
         }
+        else {
+            string = "[]";
+        }
         return string;
     }
 
