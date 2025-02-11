@@ -25,7 +25,14 @@ public class DynamicArray {
 
     // Inserts Object Data at specefic index 
     public void insert(int index, Object data){
-
+        if (size >= capacity){
+            grow();
+        }
+        for (int i = size; i < index; i--){
+            array[i] = array[i - 1]; //Will shift all the elements to the right to make room for the insertion
+        }
+        array[index] = data;
+        size++;
     }
 
     // delets object data
@@ -59,7 +66,7 @@ public class DynamicArray {
         String string = " "; // intialize empty string
 
         // iterrates through the array
-        for(int i = 0; i < size; i++ ){
+        for(int i = 0; i < capacity; i++ ){
             string += array[i] + ", ";    //not sure what it is doing here
         }
 
