@@ -13,6 +13,8 @@ public class main{
         dynamicArray.add("C");
         dynamicArray.add("D");
 
+        dynamicArray.insert(0, "X");
+
         System.out.println(dynamicArray);
         System.out.println("size" + dynamicArray.size);
         System.out.println("Capacity: " + dynamicArray.capacity);

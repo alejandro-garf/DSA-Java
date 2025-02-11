@@ -28,7 +28,7 @@ public class DynamicArray {
         if (size >= capacity){
             grow();
         }
-        for (int i = size; i < index; i--){
+        for (int i = size - 1; i > index; i--){
             array[i] = array[i - 1]; //Will shift all the elements to the right to make room for the insertion
         }
         array[index] = data;
