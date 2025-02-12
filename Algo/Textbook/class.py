@@ -5,6 +5,9 @@ class Point: #Name of the class
         self.x = x   #data member                     #initialize a new instance of the Point class
         self.y = y     #data member
 
+    def __iter__(self):
+        return PointIterator(self)
+
 
     def __len___(self):  #implements the lenght interface - we can now use the lenght function with our Point member objects
         return 2          ## Returns two since a planar point always has two coordinates
@@ -29,3 +32,6 @@ class Point: #Name of the class
 P = Point(3,4) # creates a new point object bound to the variable P with 3 and 4 for the x and y data members
 
 P.quadrant() # acceesses the data members and returns one 
+
+for coord in iter(p):
+    print(coord)
