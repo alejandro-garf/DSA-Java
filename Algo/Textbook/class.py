@@ -1,4 +1,5 @@
 
+@total_ordering
 class Point: #Name of the class
     def __init__(self, x, y): #Member Function - Special Function called to
         self.x = x   #data member                     #initialize a new instance of the Point class
@@ -7,6 +8,11 @@ class Point: #Name of the class
 
     def __len___(self):  #implements the lenght interface - we can now use the lenght function with our Point member objects
         return 2          ## Returns two since a planar point always has two coordinates
+    
+    def __lt__(self, other):  # supports all five comparison operators
+        return self.x < other.x
+    def __eq__(self, other):
+        return self.x == other.x
 
     def quadrant(self): # Member Function - regular function
         if self.x >= 0:
