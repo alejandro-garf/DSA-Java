@@ -4,6 +4,10 @@ class Point: #Name of the class
         self.x = x   #data member                     #initialize a new instance of the Point class
         self.y = y     #data member
 
+
+    def __len___(self):  #implements the lenght interface - we can now use the lenght function with our Point member objects
+        return 2          ## Returns two since a planar point always has two coordinates
+
     def quadrant(self): # Member Function - regular function
         if self.x >= 0:
             if self.y >= 0:
